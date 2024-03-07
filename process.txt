@@ -1,0 +1,27 @@
+according to article on medium first of all find out which apporach to use. 
+What problem statement is 
+1) spatial clustering 
+2) year classification
+3) events occuring in distance range kms 
+
+1) spatial clustering 
+which approach to adopt? 
+
+Can we use decision trees? Since none of the problems involve any prediction but it is based completely on classification with previous data. For example if was asked that supposr in terms of roads which road is supposed to have high traffic in pressent or future in terms of time or weather condition or day then decion trees can be helful. 
+
+So using k means clustering for spatial clustering.
+
+2) year classification (most affected)? 
+first on the basis of date year is extracted then dictionary can be made and count can be increased. (or on the bassi of pandas.)
+
+3) count of events occuring in 50 kms distance 
+for that distance factor needs to be found out on the basis of lat and long. 
+for each lat long find distance of every point
+simply 50 kms above are added. 
+SWL will be beneficial for it.  
+
+---------------------------------------------------------
+In terms of processing: 
+So the first two goals were simple and fast 
+But last goal was that intially it took a long time. 
+I was because apply slow function on dataframe. As solution I applied swifter as parallel processing part but it made the process slower. So  I tried pyspark and used it for faster processing and it helped for pandas dataframes. 
